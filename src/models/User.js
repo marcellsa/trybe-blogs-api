@@ -14,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
   {
     tablename: 'users', // Padrão: no plural
     underscored: true,
+    timestamps: false,
   });
   return UserTable;
 }

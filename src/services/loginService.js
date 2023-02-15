@@ -12,8 +12,7 @@ const authenticate = async ({ email, password }) => {
     attributes: ['id', 'displayName', 'email'],
     where: { email, password },
   });
-  console.log(user);
-
+  
   if (!user) {
     const error = new Error('Invalid fields');
     error.status = 400;
