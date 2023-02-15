@@ -8,4 +8,6 @@ routers.post('/', userController.create);
 
 routers.get('/', authenticationMiddleware, userController.getAll);
 
+routers.get('/:id', authenticationMiddleware, userController.getById);
+
 module.exports = routers;
