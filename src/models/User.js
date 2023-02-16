@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     image: DataTypes.STRING,
   },
   {
-    tablename: 'users', // Padrão: no plural
+    tableName: 'users', // Padrão: no plural
     underscored: true,
     timestamps: false,
   });

@@ -12,22 +12,22 @@ module.exports = (sequelize, DataTypes) => {
     },    
   },
   {
-    tablename: 'postsCategories', // Padrão: no plural
+    tableName: 'posts_categories', // Padrão: no plural
     timestamps: false,
     underscored: true,
   });
 
   PostCategory.associate = (models) => {
     models.BlogPost.belongsToMany(models.Category, {
-      as: 'posts',
-      foreignKey: 'categoryId',
-      otherKey: 'postId',
-      through: PostCategory,
-    });
-    models.Category.belongsToMany(models.BlogPost, {
       as: 'categories',
       foreignKey: 'postId',
       otherKey: 'categoryId',
+      through: PostCategory,
+    });
+    models.Category.belongsToMany(models.BlogPost, {
+      as: 'blog_posts',
+      foreignKey: 'categoryId',
+      otherKey: 'postId',
       through: PostCategory,
     });
   }

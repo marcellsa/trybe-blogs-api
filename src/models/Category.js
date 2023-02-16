@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     },
   },
   {
-    tablename: 'categories', // Padrão: no plural
+    tableName: 'categories', // Padrão: no plural
     timestamps: false,
     underscored: true,
   });

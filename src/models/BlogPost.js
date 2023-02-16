@@ -31,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   },
   {
-    tablename: 'blogPosts', // Padrão: no plural
+    tableName: 'blog_posts', // Padrão: no plural
     timestamps: false,
     underscored: true,
   });
