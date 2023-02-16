@@ -6,4 +6,6 @@ const routers = Router();
 
 routers.post('/', authenticationMiddleware, categoryController.create);
 
+routers.get('/', authenticationMiddleware, categoryController.getAll);
+
 module.exports = routers;
