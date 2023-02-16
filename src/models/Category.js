@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  const CategoryTable = sequelize.define('Category', { // Padrão: no singular
+  const Category = sequelize.define('Category', { // Padrão: no singular
     id: {
       allowNull: false,
       autoIncrement: true,
@@ -16,5 +16,5 @@ module.exports = (sequelize, DataTypes) => {
     timestamps: false,
     underscored: true,
   });
-  return CategoryTable;
+  return Category;
 }
