@@ -10,4 +10,6 @@ routers.get('/', authenticationMiddleware, postController.getAllPosts);
 
 routers.get('/:id', authenticationMiddleware, postController.getPostId);
 
+routers.put('/:id', authenticationMiddleware, postController.update);
+
 module.exports = routers;
