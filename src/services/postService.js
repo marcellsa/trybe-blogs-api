@@ -70,15 +70,29 @@ const getPostId = async (id) => {
   return postById;
 };
 
-const update = async ({ id, title, content, req }) => {
-  const post = await PostCategory.findOne(id);
-  if (post.userId !== req.userId.id) {
+const validateUpdate = (title, content) => {
+  if (!title || !content) {
+    const e = new Error('Some required fields are missing');
+    e.status = 400;
+    throw e;
+  }
+};
+
+const update = async ({ id, title, content, userId }) => {
+  validateUpdate(title, content);
+  const post = await BlogPost.findByPk(id);  
+  if (post.userId !== userId) {
     const error = new Error('Unauthorized user');
-    error.status = 404;
+    error.status = 401;
     throw error;
   }
-
-  const result = await PostCategory.edit(id, title, content);
+  await BlogPost.update({ title, content }, { where: { id } });
+  const result = await BlogPost.findByPk(id, {
+    include: [
+      { model: User, as: 'user', attributes: { exclude: ['password'] } },
+      { model: Category, as: 'categories', through: { attributes: [] } },
+    ],
+  });
   return result;
 };
 

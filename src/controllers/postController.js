@@ -22,8 +22,8 @@ const getPostId = async (req, res) => {
 
 const update = async (req, res) => {
   const { id } = req.params;
-  const { title, content } = req.body;
-  const updatedPost = await postService.update({ id, title, content, req });
+  const { title, content, user: { id: userId } } = req.body;
+  const updatedPost = await postService.update({ id, title, content, userId });
   return res.status(200).json(updatedPost);
 };
 
