@@ -12,4 +12,6 @@ routers.get('/:id', authenticationMiddleware, postController.getPostId);
 
 routers.put('/:id', authenticationMiddleware, postController.update);
 
+routers.delete('/:id', authenticationMiddleware, postController.remove);
+
 module.exports = routers;
