@@ -28,11 +28,9 @@ module.exports = {
         }
       },
       published: {
-        allowNull: false,
         type: Sequelize.DATE,
       },
       updated: {
-        allowNull: false,
         type: Sequelize.DATE,
       }
     })

@@ -17,17 +17,13 @@ module.exports = (sequelize, DataTypes) => {
     userId: {
       allowNull: false,
       type: DataTypes.INTEGER,
-      foreignKey: true,
+      primaryKey: true,
     },
     published: {
-      allowNull: false,
       type: DataTypes.DATE,
-      defaultValue: new Date(),
     },
     updated: {
-      allowNull: false,
       type: DataTypes.DATE,
-      defaultValue: new Date(),
     }
   },
   {
