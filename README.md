@@ -1,35 +1,77 @@
+<!-- Título do Projeto -->
 # Blogs API
 
-O projeto envolveu o desenvolvimento e teste de uma API de Blog com funcionalidades completas de CRUD de postagens e autenticação de usuários. Inspirada na API do Blogger, a solução permite criar, ler, atualizar e excluir postagens com segurança. Foram implementadas práticas de segurança e o banco de dados foi projetado para armazenar informações relevantes. A API foi testada de forma rigorosa e resultou em uma solução robusta e eficiente para gerenciar conteúdo de blog.
+API e um banco de dados para a produção de conteúdo em um blog.
 
-## Tecnologias Utilizadas
+<!-- Status do Projeto -->
+## 📊 Status do Projeto
 
-- Lista de tecnologias utilizadas no projeto.
+![Concluído](https://img.shields.io/badge/status-conclu%C3%ADdo-brightgreen)
 
-## Funcionalidades
+<!-- Visão Geral -->
+## 💡Visão Geral
 
-- Descrição das principais funcionalidades do projeto.
+Neste projeto, será desenvolvida uma API em Node.js usando o pacote Sequelize para um CRUD de posts em um blog. A API seguirá os princípios REST e terá autenticação de usuários. Além disso, serão utilizadas categorias para classificar os posts, estabelecendo relações entre usuários, posts e categorias. O objetivo é criar uma API funcional e organizada para a produção de conteúdo em um blog.
 
-## Pré-requisitos
+<!-- Tecnologias -->
+## 🔧Tecnologias
 
-- Lista de pré-requisitos necessários para executar o projeto.
+![JavaScript](https://img.shields.io/badge/-JavaScript-yellow) ![Node.js](https://img.shields.io/badge/-Node.js-green) ![Express](https://img.shields.io/badge/-Express-lightgrey) ![MySQL](https://img.shields.io/badge/-MySQL-blue) ![Docker](https://img.shields.io/badge/-Docker-blue) ![npm](https://img.shields.io/badge/-npm-red) ![Git](https://img.shields.io/badge/-Git-red) ![GitHub](https://img.shields.io/badge/-GitHub-black) ![ESLint](https://img.shields.io/badge/-ESLint-purple) ![Prettier](https://img.shields.io/badge/-Prettier-pink) ![REST API](https://img.shields.io/badge/-REST%20API-green) ![JSON](https://img.shields.io/badge/-JSON-orange) ![JWT](https://img.shields.io/badge/-JWT-yellow)
 
-## Instalação
+<!-- Recursos -->
+## 📚Recursos
 
-- Instruções de instalação do projeto.
+- Foi desenvolvido endpoints que estao conectados ao banco de dados seguindo os princípios do REST;
 
-## Uso
+- Para fazer um post é necessário usuário e login, portanto foi trabalhado a relação entre user e post;
 
-- Instruções de uso do projeto.
+- Foi necessária a utilização de categorias para os posts, trabalhando, assim, a relação de posts para categories e de categories para posts.
 
-## Contribuição
+<!-- Instalação -->
+## ⚙️Instalação
 
-- Instruções para contribuição no projeto.
+### ⬇️ Dependências
 
-## Licença
+```bash
+npm install
+``` 
 
-- Declaração da licença do projeto.
+<!-- Uso -->
+## 🖥️Uso
 
-## Contato
+Configurar o banco de dados MySQL:
 
-- Informações de contato para dúvidas ou feedback.
+- Definir variáveis de ambiente em um arquivo .env;
+- Criar do banco de dados e tabelas com:
+
+```bash
+npx sequelize db:create
+npx sequelize db:migrate
+```
+
+Se desejar, preencha as tabelas com dados iniciais com:
+
+```bash
+npx sequelize db:seed:all
+```
+
+A aplicação será iniciado com:
+
+```bash
+npm start
+```
+
+<!-- Licença -->
+## 📝Licença
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+
+
+<!-- Contato -->
+## 📞Contato
+
+Informações de contato para dúvidas, suporte ou colaborações.
+
+✉️ msalbuquerque@hotmail.com
+
+💼 [LinkedIn](https://linkedin.com/in/marcellsa)
