@@ -1,7 +1,7 @@
 <!-- Título do Projeto -->
 # Blogs API
 
-API e um banco de dados para a produção de conteúdo em um blog.
+Aplicação (API) que permite criar, ler, atualizar e excluir postagens de blog, além de fornecer autenticação de usuários para acessar essas funcionalidades.
 
 <!-- Status do Projeto -->
 ## 📊 Status do Projeto
@@ -11,7 +11,9 @@ API e um banco de dados para a produção de conteúdo em um blog.
 <!-- Visão Geral -->
 ## 💡Visão Geral
 
-Neste projeto, será desenvolvida uma API em Node.js usando o pacote Sequelize para um CRUD de posts em um blog. A API seguirá os princípios REST e terá autenticação de usuários. Além disso, serão utilizadas categorias para classificar os posts, estabelecendo relações entre usuários, posts e categorias. O objetivo é criar uma API funcional e organizada para a produção de conteúdo em um blog.
+Neste projeto, desenvolvi uma aplicação backend para gerenciar um blog. Utilizei Node.js e Sequelize para criar uma API RESTful que permitia aos usuários realizar operações de criação, leitura, atualização e exclusão (CRUD) de postagens. Além disso, implementei um sistema de autenticação para garantir que apenas usuários autorizados pudessem acessar as funcionalidades da API.
+
+O objetivo foi criar uma plataforma robusta e organizada, facilitando a produção de conteúdo e a interação dos usuários em um ambiente de blog. Com este projeto, esperava fornecer uma solução eficiente e segura para a gestão de blogs online.
 
 <!-- Tecnologias -->
 ## 🔧Tecnologias
